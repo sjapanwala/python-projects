@@ -1,3 +1,8 @@
 muxfetch - linux/unix systems only
+  -> a mini systems fetcher
 netfetch - all systems
+  -> fetcher for networks
 pyt      - all systems (may require script)
+  -> python developer tool
+repixel  - all systems
+  -> image pixelizer (for ML)
