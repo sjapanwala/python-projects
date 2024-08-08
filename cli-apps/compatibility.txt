@@ -1,0 +1,3 @@
+muxfetch - linux/unix systems only
+netfetch - all systems
+pyt      - all systems (may require script)
