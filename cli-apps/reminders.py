@@ -3,16 +3,18 @@ import sys
 import os
 from datetime import datetime
 data_base = 'todos.txt'
-allowed_commands = ['-dl', '-at', '-rt', '-tt', '-in']
+allowed_commands = ['-dl', '-at', '-rt', '-tt', '-in', '--h']
 # x's    ✗
 # checks ✓
 def commands():
     print("""
+    Usage:
     -dl     display list
     -at     add task
     -rt     remove task
     -ct     toggle task
     -in     init files
+    --h     help
     """)
 
 def convert_to_month(month):
@@ -229,7 +231,9 @@ def main():
         print(f"\033[31merror: \033[91m'{sys.argv[1]}'\033[0m is not recognized as a command")
         commands()
     elif sys.argv[1] in allowed_commands:
-        if sys.argv[1] == '-dl':
+        if sys.argv[1] == '--h':
+            commands()
+        elif sys.argv[1] == '-dl':
             lists = display_list(data_base)
             if not lists:
                 print("\033[31merror: \033[0mData Base Is Empty, Add Tasks With '-at'")
